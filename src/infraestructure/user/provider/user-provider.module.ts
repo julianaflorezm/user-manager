@@ -36,7 +36,7 @@ import { roleRepositoryProvider } from 'src/infraestructure/role/provider/reposi
     UserMapper,
     JwtModule.register({
       global: true,
-      secret: 'vass_secret',
+      secret: process.env.JWT_SECRET,
       signOptions: { expiresIn: '1h' },
     }),
   ],

@@ -1,5 +1,5 @@
-import { UserController } from 'src/infraestructure/user/controller/user.controller';
-import { GetUserListHandler } from 'src/application/user/query/get-user-list.handler';
+import { UserController } from '../../../src/infraestructure/user/controller/user.controller';
+import { GetUserListHandler } from '../../../src/application/user/query/get-user-list.handler';
 import { UserDto } from 'src/application/user/query/dto/user.dto';
 import { GetUserListService } from 'src/domain/user/service/get-user-list-service';
 import { GetUserHandler } from 'src/application/user/query/get-user.handler';

@@ -1,6 +1,8 @@
 import { hash, compare } from 'bcrypt';
 import { BussinessError } from 'src/domain/errors/bussiness-error';
 import { Role } from 'src/domain/role/model/role';
+import { HttpStatus } from '@nestjs/common';
+import { INCORRECT_PASSWORD } from 'src/domain/errors/common-messages';
 
 export class User {
   readonly #id: number;
@@ -74,7 +76,7 @@ export class User {
 
   static async comparePassword(password, encryptPass) {
     if (!(await compare(password, encryptPass))) {
-      throw new BussinessError(`INCORRECT_PASSWORD`);
+      throw new BussinessError(INCORRECT_PASSWORD, HttpStatus.BAD_REQUEST);
     }
     return true;
   }

@@ -5,7 +5,7 @@ import { RoleRepository } from '../../../src/domain/role/port/repository/role-re
 import { Role } from '../../../src/domain/role/model/role';
 import { user } from '../../___mocks___/user';
 
-describe('GetUserService', () => {
+describe('CreateUserService', () => {
   let createUserService: CreateUserService;
   let userRepository: UserRepository;
   let roleRepository: RoleRepository;
@@ -25,7 +25,7 @@ describe('GetUserService', () => {
     createUserService = new CreateUserService(userRepository, roleRepository);
   });
 
-  it('it should create an user', async () => {
+  it.only('it should create an user', async () => {
     const role = new Role(
       user.role.id,
       user.role.name,
@@ -33,6 +33,7 @@ describe('GetUserService', () => {
       user.role.updated,
     );
     user.role = role;
+    (userRepository.findByEmail as jest.Mock).mockResolvedValue(user);
     (roleRepository.findRole as jest.Mock).mockResolvedValue(user.role);
     (userRepository.create as jest.Mock).mockResolvedValue(user);
     const created = await createUserService.run(

@@ -1,6 +1,5 @@
 import { UserRepository } from '../../../src/domain/user/port/repository/user-repository';
 import { UpdateUserService } from '../../../src/domain/user/service/update-user-service';
-import { CreateUserCommand } from '../../../src/application/user/command/create-user.command';
 import { user, userCommand } from '../../___mocks___/user';
 
 describe('UpdateUserService', () => {

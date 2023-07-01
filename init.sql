@@ -13,7 +13,7 @@ CREATE TABLE Users(
     id SERIAL PRIMARY KEY,
     name varchar(250) NOT NULL,
     password varchar(250) NOT NULL,
-    email varchar(250) NOT NULL,
+    email varchar(250) UNIQUE NOT NULL,
     phone varchar(20) NOT NULL,
     role_id int NOT NULL,
     created timestamp default current_timestamp,
