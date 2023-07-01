@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_DB=Vass
+      - POSTGRES_USER=vass
+      - POSTGRES_PASSWORD=vass
+    ports:
+      - '2345:5432'
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
