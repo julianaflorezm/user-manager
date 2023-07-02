@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { GetUserListService } from 'src/domain/user/service/get-user-list-service';
+import { GetUserListService } from '../../../domain/user/service/get-user-list-service';
 import { UserDto } from './dto/user.dto';
 
 @Injectable()

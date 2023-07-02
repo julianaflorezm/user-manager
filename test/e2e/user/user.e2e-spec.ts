@@ -1,16 +1,16 @@
 import { UserController } from '../../../src/infraestructure/user/controller/user.controller';
 import { GetUserListHandler } from '../../../src/application/user/query/get-user-list.handler';
-import { UserDto } from 'src/application/user/query/dto/user.dto';
-import { GetUserListService } from 'src/domain/user/service/get-user-list-service';
-import { GetUserHandler } from 'src/application/user/query/get-user.handler';
-import { GetUserService } from 'src/domain/user/service/get-user-service';
-import { DeleteUserHandler } from 'src/application/user/command/delete-user.handler';
-import { DeleteUserService } from 'src/domain/user/service/delete-user-service';
-import { CreateUserService } from 'src/domain/user/service/create-user-service';
-import { CreateUserHandler } from 'src/application/user/command/create-user.handler';
-import { UpdateUserHandler } from 'src/application/user/command/update-user.handler';
-import { UpdateUserService } from 'src/domain/user/service/update-user-service';
-import { LoginUserHandler } from 'src/application/user/command/login-user.handler';
+import { UserDto } from '../../../src/application/user/query/dto/user.dto';
+import { GetUserListService } from '../../../src/domain/user/service/get-user-list-service';
+import { GetUserHandler } from '../../../src/application/user/query/get-user.handler';
+import { GetUserService } from '../../../src/domain/user/service/get-user-service';
+import { DeleteUserHandler } from '../../../src/application/user/command/delete-user.handler';
+import { DeleteUserService } from '../../../src/domain/user/service/delete-user-service';
+import { CreateUserService } from '../../../src/domain/user/service/create-user-service';
+import { CreateUserHandler } from '../../../src/application/user/command/create-user.handler';
+import { UpdateUserHandler } from '../../../src/application/user/command/update-user.handler';
+import { UpdateUserService } from '../../../src/domain/user/service/update-user-service';
+import { LoginUserHandler } from '../../../src/application/user/command/login-user.handler';
 import { user, userCommand } from '../../___mocks___/user';
 
 describe('UserController', () => {

@@ -1,9 +1,9 @@
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Injectable } from '@nestjs/common';
-import { RoleRepository } from 'src/domain/role/port/repository/role-repository';
-import { RoleEntity } from 'src/infraestructure/role/entity/role.entity';
-import { RoleDto } from 'src/application/role/query/dto/role.dto';
+import { RoleRepository } from 'domain/role/port/repository/role-repository';
+import { RoleEntity } from 'infraestructure/role/entity/role.entity';
+import { RoleDto } from 'application/role/query/dto/role.dto';
 
 @Injectable()
 export class PgRoleRepository implements RoleRepository {

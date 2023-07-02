@@ -1,4 +1,4 @@
-import { UserDto } from 'src/application/user/query/dto/user.dto';
+import { UserDto } from '../../../application/user/query/dto/user.dto';
 import { UserRepository } from '../port/repository/user-repository';
 
 export class GetUserListService {

@@ -1,5 +1,5 @@
-import { UserEntity } from 'src/infraestructure/user/entity/user.entity';
-import { UserDto } from 'src/application/user/query/dto/user.dto';
+import { UserEntity } from '../../../../infraestructure/user/entity/user.entity';
+import { UserDto } from '../../../../application/user/query/dto/user.dto';
 import { User } from '../../model/user';
 
 export abstract class UserRepository {

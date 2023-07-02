@@ -10,13 +10,13 @@ import {
   Put,
   UseGuards,
 } from '@nestjs/common';
-import { GetUserListHandler } from 'src/application/user/query/get-user-list.handler';
-import { UserDto } from 'src/application/user/query/dto/user.dto';
-import { GetUserHandler } from 'src/application/user/query/get-user.handler';
-import { DeleteUserHandler } from 'src/application/user/command/delete-user.handler';
-import { CreateUserHandler } from 'src/application/user/command/create-user.handler';
-import { CreateUserCommand } from 'src/application/user/command/create-user.command';
-import { UpdateUserHandler } from 'src/application/user/command/update-user.handler';
+import { GetUserListHandler } from '../../../application/user/query/get-user-list.handler';
+import { UserDto } from '../../../application/user/query/dto/user.dto';
+import { GetUserHandler } from '../../../application/user/query/get-user.handler';
+import { DeleteUserHandler } from '../../../application/user/command/delete-user.handler';
+import { CreateUserHandler } from '../../../application/user/command/create-user.handler';
+import { CreateUserCommand } from '../../../application/user/command/create-user.command';
+import { UpdateUserHandler } from '../../../application/user/command/update-user.handler';
 import {
   ApiBearerAuth,
   ApiCreatedResponse,
@@ -26,10 +26,10 @@ import {
   ApiResponse,
   ApiTags,
 } from '@nestjs/swagger';
-import { UserLoginCommand } from 'src/application/user/command/user-login.command';
-import { LoginUserHandler } from 'src/application/user/command/login-user.handler';
-import { JwtAuthGuard } from 'src/infraestructure/auth/jwt-auth-guard';
-import { Roles } from 'src/infraestructure/role/decorator/role.decorator';
+import { UserLoginCommand } from '../../../application/user/command/user-login.command';
+import { LoginUserHandler } from '../../../application/user/command/login-user.handler';
+import { JwtAuthGuard } from '../../../infraestructure/auth/jwt-auth-guard';
+import { Roles } from '../../../infraestructure/role/decorator/role.decorator';
 import { AuthGuard } from '@nestjs/passport';
 
 @ApiBearerAuth()

@@ -1,8 +1,8 @@
 import { hash, compare } from 'bcrypt';
-import { BussinessError } from 'src/domain/errors/bussiness-error';
-import { Role } from 'src/domain/role/model/role';
+import { BussinessError } from '../../../domain/errors/bussiness-error';
+import { Role } from '../../../domain/role/model/role';
+import { INCORRECT_PASSWORD } from '../../../domain/errors/common-messages';
 import { HttpStatus } from '@nestjs/common';
-import { INCORRECT_PASSWORD } from 'src/domain/errors/common-messages';
 
 export class User {
   readonly #id: number;

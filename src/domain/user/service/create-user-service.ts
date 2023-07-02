@@ -1,11 +1,11 @@
-import { RoleRepository } from 'src/domain/role/port/repository/role-repository';
-import { UserDto } from 'src/application/user/query/dto/user.dto';
+import { RoleRepository } from '../../../domain/role/port/repository/role-repository';
 import { User } from '../model/user';
+import { UserDto } from '../../../application/user/query/dto/user.dto';
 import { UserRepository } from '../port/repository/user-repository';
-import { Role } from 'src/domain/role/model/role';
+import { Role } from '../../../domain/role/model/role';
 import { HttpStatus } from '@nestjs/common';
-import { BussinessError } from 'src/domain/errors/bussiness-error';
-import { EMAIL_ALREADY_EXISTS } from 'src/domain/errors/common-messages';
+import { BussinessError } from '../../../domain/errors/bussiness-error';
+import { EMAIL_ALREADY_EXISTS } from '../../../domain/errors/common-messages';
 
 export class CreateUserService {
   constructor(

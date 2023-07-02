@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { DeleteUserService } from 'src/domain/user/service/delete-user-service';
+import { DeleteUserService } from '../../../domain/user/service/delete-user-service';
 import { UserDto } from '../query/dto/user.dto';
 
 @Injectable()

@@ -1,11 +1,11 @@
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Injectable } from '@nestjs/common';
-import { UserRepository } from 'src/domain/user/port/repository/user-repository';
+import { UserRepository } from 'domain/user/port/repository/user-repository';
 import { UserEntity } from '../../entity/user.entity';
-import { UserDto } from 'src/application/user/query/dto/user.dto';
-import { User } from 'src/domain/user/model/user';
-import { RoleEntity } from 'src/infraestructure/role/entity/role.entity';
+import { UserDto } from 'application/user/query/dto/user.dto';
+import { User } from 'domain/user/model/user';
+import { RoleEntity } from 'infraestructure/role/entity/role.entity';
 
 @Injectable()
 export class PgUserRepository implements UserRepository {

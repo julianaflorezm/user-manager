@@ -1,11 +1,11 @@
-import { ValueRequiredError } from 'src/domain/errors/value-required-error';
-import { UserDto } from 'src/application/user/query/dto/user.dto';
+import { ValueRequiredError } from '../../../domain/errors/value-required-error';
+import { UserDto } from '../../../application/user/query/dto/user.dto';
 import { UserRepository } from '../port/repository/user-repository';
-import { UserLoginCommand } from 'src/application/user/command/user-login.command';
+import { UserLoginCommand } from '../../../application/user/command/user-login.command';
 import { User } from '../model/user';
 import { JwtService } from '@nestjs/jwt';
 import { HttpStatus } from '@nestjs/common';
-import { USER_NOT_FOUND } from 'src/domain/errors/common-messages';
+import { USER_NOT_FOUND } from '../../../domain/errors/common-messages';
 
 export class LoginUserService {
   constructor(

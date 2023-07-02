@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { UserDto } from '../query/dto/user.dto';
-import { CreateUserService } from 'src/domain/user/service/create-user-service';
+import { CreateUserService } from '../../../domain/user/service/create-user-service';
 import { CreateUserCommand } from './create-user.command';
-import { User } from 'src/domain/user/model/user';
+import { User } from '../../../domain/user/model/user';
 
 @Injectable()
 export class CreateUserHandler {

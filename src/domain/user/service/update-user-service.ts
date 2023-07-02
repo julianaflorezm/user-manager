@@ -1,13 +1,13 @@
-import { ValueRequiredError } from 'src/domain/errors/value-required-error';
-import { UserDto } from 'src/application/user/query/dto/user.dto';
+import { ValueRequiredError } from '../../../domain/errors/value-required-error';
+import { UserDto } from '../../../application/user/query/dto/user.dto';
 import { UserRepository } from '../port/repository/user-repository';
-import { CreateUserCommand } from 'src/application/user/command/create-user.command';
+import { CreateUserCommand } from '../../../application/user/command/create-user.command';
 import { HttpStatus } from '@nestjs/common';
-import { BussinessError } from 'src/domain/errors/bussiness-error';
+import { BussinessError } from '../../../domain/errors/bussiness-error';
 import {
   USER_ID_REQUIRED,
   USER_NOT_FOUND,
-} from 'src/domain/errors/common-messages';
+} from '../../../domain/errors/common-messages';
 
 export class UpdateUserService {
   constructor(private readonly _userRepository: UserRepository) {}
