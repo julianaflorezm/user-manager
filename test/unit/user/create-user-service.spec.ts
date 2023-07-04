@@ -33,7 +33,7 @@ describe('CreateUserService', () => {
       user.role.updated,
     );
     user.role = role;
-    (userRepository.findByEmail as jest.Mock).mockResolvedValue(user);
+    (userRepository.findByEmail as jest.Mock).mockResolvedValue(null);
     (roleRepository.findRole as jest.Mock).mockResolvedValue(user.role);
     (userRepository.create as jest.Mock).mockResolvedValue(user);
     const created = await createUserService.run(
